@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+
+<body>
+    <script>
+
+        // operators are symbols that used to perform some operation on operands
+
+            // Arithmetic Operators  => +,-,*,/,%,++,--
+            // Comparison Operators  => ==,===,!=,!==,>,>=,<,<=
+            // Logical (or Relational) Operators  => &&,||,!
+            // Bitwise Operators  => &,|,^(xor),~(not),<<,>>,>>>(right shift with zero)
+            // Assignment Operators  => =,+=,-=,*=,/=,%=
+            // Conditional (or ternary) Operators
+            // special operator.  => typeof, instanceof, new, void, yield, delete, in, (?:)ternary,',
+
+
+        // Arithmetic Operators
+
+            var a = 10;
+
+            document.write(a + '<br>');      //10
+            document.write((a++) + '<br>');  //10
+            document.write((++a) + '<br>');  //12
+            document.write((++a) + '<br>');  //13
+            document.write((--a) + '<br>');  //12
+            document.write((a--) + '<br>');  //12
+            document.write(a + '<br>');      //11
+
+
+        // relational/Comparison operators
+
+            a = 10;
+            var b = 2;
+
+            if (a > b) {
+                document.write('a < b'+'<br>');
+            }
+            else if (b > a) {
+                document.write('b > a'+'<br>');
+            }
+            else if (a == b) {
+                document.write('a==b'+'<br>');
+            }
+            // === strictly equal to operator
+            else if (a === b) {
+                document.write('a===b'+'<br>');
+            }
+            else if (a !== b) {
+                document.write('a!==b'+'<br>');
+            }
+            else if (a != b) {
+                document.write('a!==b'+'<br>');
+            }
+
+            // === strictly equal op
+            // the equality operator, the strict equality operator 
+            // always considers operands of different types to be different.
+            console.log(1 === 1);   //true
+            console.log(1 === "1"); //false one 1 in number and other is string
+            console.log(1 == "1");  //true 'this will not check Data type '
+
+
+        // logical operator
+
+            var m=10;
+            var n=20;
+
+            if(m < 20 && n > 10){
+                document.write('m is < 20 and n > 10 <br>');
+            }
+            if(m!=n){
+                document.write('m is not equal to n <br>');
+            }
+            if(m < 20 || n > 10){
+                document.write('m is < 20 or n > 10 <br>');
+            }
+
+        // special operator. => ternary operator
+
+        // A ternary operator evaluates a condition and executes a block of code 
+        // based on the condition.
+        // Its syntax is:
+        // condition ? expression1 : expression2
+
+            var p = 13;
+            var q = 10;
+
+            var marks = 6;
+            let result = (marks >= 40) ? 'pass' : 'fail';
+
+            console.log(`You ${result} the exam.`);
+
+    </script>
+</body>
+
+</html>

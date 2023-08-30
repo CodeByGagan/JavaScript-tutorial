@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter & Setter</title>
+</head>
+<body>
+    <script>
+        // Getter method get the value of the obj
+        // Setter method set the value of the obj
+        
+        // shape1 = new Shape(4); // it will throw refernceError class hoisting is not supporting js
+        // console.log(shape1.width);
+
+        class Shape{
+            constructor(width){
+                this.width = width;
+                // this.height = height;
+            }
+
+            // Getter method
+            get details(){
+                // var area = this.height*this.width;
+                return this.width;
+            }
+            
+            // Setter method
+            set details(w){
+                this.width = w;
+                // this.height = h;
+            }
+
+        }
+
+        // shape1 = new Shape(4);
+        // console.log(shape1.width);
+
+        const test = Shape.details();
+        console.log(test)
+
+    </script>
+</body>
+</html>

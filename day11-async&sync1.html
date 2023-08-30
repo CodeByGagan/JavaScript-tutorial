@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async 1</title>
+</head>
+<body>
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam iure veritatis nam!</p>
+
+    <script>
+
+        setTimeout(function1,4000); // function1 is callback function here
+        function function1(){
+            document.getElementById('para').innerHTML = "this is inside function1";
+        }
+        
+        display=(a)=>{
+            document.write(a); 
+        }
+        calc=(n1,n2)=>{
+            var sum = n1+n2;
+            display(sum+'<br>');
+        }
+        calc(3,2);
+
+        // JS callback function
+        // A callback is a function passed as an argument to another function.
+
+        display1=(a)=>{
+            document.write(a); 
+        }
+        calc1=(n1,n2)=>{
+            var sum = n1+n2;
+            display1(sum+'<br>');
+            
+        }
+         calc1(4,4,display1); // here display1 is callback function because we are passing it as an argument in another function(calc1).
+         // when we use function as an argumment we can't use ().
+
+
+    </script>
+</body>
+</html>

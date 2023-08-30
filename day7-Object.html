@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS obj</title>
+</head>
+<body>
+    <script>
+        // JS obj are any real life entity that have behaviour & properties like method & operation
+        // Obj are variable which store multiple value
+        // Objects are variables too. But objects can contain many values.
+        //1.	By object literal
+        // 2.	By creating instance of Object directly (using new keyword)
+        // 3.	By using an object constructor (using new)
+        
+        let employee = 'Gagan';  // this is variable
+        const employee1 = {       // this is obj
+           empId : 123,
+           empName : 'Gagan',
+           empDept : 'IT',
+           empSalary : 50000,
+           empHra : 15000,
+          calcGrossSalary() {
+            return this.empSalary + this.empHra;
+           }
+        };
+
+        // Accessing Object Properties
+        // You can access object properties in two ways:
+        // 1. objectName.propertyName
+        // 2. objectName["propertyName"]
+        document.write(employee1.empId+' '+ employee1.empName+' '+employee1.empDept+'<br>');
+        document.write(employee1['empId']+' '+employee1['empName']+' '+employee1['empDept']+'<br>');
+        document.write(employee1.calcGrossSalary()+'<br>');
+
+        // const fullName = {
+        //     fName : 'Spider',
+        //     lName : 'Man',
+        //     name : function nam() {
+        //         return this.fName + this.lName;
+        //     }
+        // }
+        // document.write(fullName.name());
+
+        const student = new Object;  // 2) By creating instance of Object
+        student.name = 'Gagan';
+        student.id = 111;
+        document.write(student.name+ ' '+ student.id+'<br>');
+
+        // 3) By using an Object constructor
+        // Here, you need to create function with arguments. Each argument value can be assigned in the current object by using this keyword.
+        // The this keyword refers to the current object.
+        // The example of creating object by object constructor is given below.
+        function country(name, capital){
+            this.name = name;
+            this.capital = capital;
+        }
+        
+        const india = new country('India', 'Delhi');
+        document.write(india.name+' '+india.capital+'<br>');
+
+    </script>
+</body>
+</html>

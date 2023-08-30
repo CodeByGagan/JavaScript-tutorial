@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // JavaScript Array
+        // JavaScript array is an object that represents a collection of similar type of elements.
+        // There are 3 ways to construct array in JavaScript
+        // 1.	By array literal
+        // 2.	By creating instance of Array directly (using new keyword)
+        // 3.	By using an Array constructor (using new keyword)
+
+        // 1.	By array literal
+        const superhero = ['SpiderMan', 'IronMan', 'Hulk', 'Thor'];
+
+        // let length = superhero.length;
+        // document.write(length+'<br>');
+
+        for(let i=0; i<superhero.length; i++){
+            document.write(superhero[i]+ ', ');
+        }
+
+        document.write('<br>');
+
+        // 2.	By creating instance of Array directly (using new keyword)
+        var avengers = new Array;
+        avengers[0] = 'IronMan';
+        avengers[1] = 'Hulk';
+        avengers[2] = 'Thor';
+
+        for(let j=0; j<avengers.length; j++){
+            document.write(avengers[j]+ ', ');
+        }
+
+         // 3.	By using an Array constructor (using new keyword)
+         //Here, you need to create instance of array by passing arguments in constructor so that we don't have to provide value explicitly.
+         const superVillain = new Array('Thanos', 'Galactus', 'Gorr');
+
+         document.write('<br>');
+         
+         for(let k=0; k<superVillain.length; k++){
+            document.write(superVillain[k]+ ', ');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="heading">Lorem ipsum dolor sit.</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa iure dicta in autem porro suscipit, unde maxime voluptates eum, provident magnam aut quod, soluta ipsum inventore accusamus dolores distinctio?</p>
+    <h3 id="heading3">Write a message.</h3>
+
+    
+
+    <form name="f1">
+        <input type="text" name="Gagan">
+        <input type="button"  value="Send" onclick="display()"></input>
+    </form>
+
+    <div class="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ex asperiores iste odit modi commodi beatae minima neque illo quis. Iste officia sapiente provident quibusdam ea atque voluptate officiis hic, cupiditate accusantium. Molestiae, at veritatis quasi, nihil ut eum dolore suscipit quaerat voluptatibus consequuntur esse.</p>
+    <br>
+    <div class="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ex asperiores iste odit modi commodi beatae minima neque illo quis. Iste officia sapiente provident quibusdam ea atque voluptate officiis hic, cupiditate accusantium. Molestiae, at veritatis quasi, nihil ut eum dolore suscipit quaerat voluptatibus consequuntur esse.
+    </div>
+
+    <h3>This is heading 3</h3>
+
+    <script>
+        const h1Color = document.getElementById('heading');
+        const h3Color = document.getElementById('heading3');
+        const para = document.getElementById('para');
+
+        h1Color.style.color = 'brown';
+        h3Color.style.color = 'white';
+
+        const textbox = document.getElementById('textbox');
+        const button1 = document.getElementById('button1');
+
+        function display(){
+            var name1 = document.f1.Gagan.value;
+            document.write(name1);
+        }
+
+        const content = document.getElementsByClassName("content");
+        // console.log(content1);
+        content[1].style.color = "purple";
+
+        const h3 = document.getElementsByTagName('h3');
+        h3[1].style.backgroundColor = 'cyan';
+        h3[0].style.backgroundColor = 'purple';
+
+
+
+    </script>
+    
+</body>
+</html>

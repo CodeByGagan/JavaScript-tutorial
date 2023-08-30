@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, ipsum.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, ipsum.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, ipsum.</p>
+
+    <h1>Lorem, ipsum.</h1>
+    <h1>Lorem, ipsum.</h1>
+    <h1>Lorem, ipsum.</h1>
+
+    <input type="button" value="see number of paragraphs" onclick="calcpara()">
+    <input type="button" value="see number of headings" onclick="calcheading()">
+
+    <script>
+        function calcpara(){
+            var paranos = document.getElementsByTagName('p');
+            alert('Number of Paragraphs '+ paranos.length);
+        }
+        function calcheading(){
+            var headnos = document.getElementsByTagName('h1')
+            alert('Number of Headings '+ headnos.length);
+        }
+    </script>
+
+</body>
+</html>

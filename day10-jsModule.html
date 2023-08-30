@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Module</title>
+    <!-- <script src="module2.js"></script> -->
+</head>
+<body>
+    <p id="para"></p>
+    <p id="para1"></p>
+    <script type="module">
+        // Module is a file that contains code to perform a specific task.
+        // A module may contain variables, functions, classes etc.
+        // As our program grows bigger, it may contain many lines of code. Instead of putting everything in a single file, you can use modules to separate codes in separate files as per their functionality. This makes our code organized and easier to maintain.
+        import {x,fun1} from './module.js'
+        document.getElementById('para').innerHTML = x;
+        // document.getElementById('para1').innerHTML = fun1();
+        fun1();
+    </script>
+</body>
+</html>

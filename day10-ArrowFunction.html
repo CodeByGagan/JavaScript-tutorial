@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+
+<body>
+    <script>
+        function display() {
+            document.write('Simple function 1 <br>');
+        }
+
+        // Arrow function
+        const display1 = () => {
+            document.write('Arrow function 1 <br>');
+        }
+
+        function function1() {
+            return document.write('Simple function 2  <br>');
+        }
+
+        const display2 = () => document.write('Arrow function 2 <br>');
+
+        display();
+        display1();
+        function1();
+        display2();
+
+        let x = function(x,y){
+            return x+y;
+        }
+
+        let x1 = (x,y) => document.write(x+y+'<br>');
+        x1(2,4);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+    <script>
+
+        // There are four types of loops in JavaScript.
+            // for loop
+            // while loop
+            // do-while loop
+            // for-in loop
+
+        // for loop
+            // for (initialization; condition; increment)  
+            // {  
+            //     code to be executed  
+            // }
+
+            for(let i=0; i<=10; i++){
+                document.write(i+'<br>');
+            }
+
+        // while loop
+
+            var j=0;
+
+            while(j<=10){
+                document.write(j+'<br>');
+                j++;
+            }
+
+
+        // display the even numbers and also numbers divisible 5,range is 45 to 70.
+
+            document.write(`Numbers divisible by 2 between 45 and 70 are <br>`);
+
+            for(let num=45; num<=70; num++){
+                if(num%2==0){
+                    document.write(num+' , ');
+                    document.write(` ${num} , `);
+                }
+            }
+
+            document.write(`<br>Numbers divisible by 5 between 45 and 70 are <br>`);
+
+            num=45;
+
+            while(num<=70){
+                if(num%5==0){
+                    document.write(` ${num} , `);
+                }
+                num++;
+            }
+            
+
+        // do-while loop
+
+            var i = 21;
+
+            do {
+                document.write(i + "<br/>");
+                i++;
+            } while (i <= 10);
+
+    </script>
+</body>
+
+</html>

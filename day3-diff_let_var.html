@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference betweeen let and var variables</title>
+</head>
+
+<body>
+    <script>
+// let	var
+// let is block-scoped.	var is function scoped.
+// let does not allow to redeclare variables.	var allows to redeclare variables.
+// Hoisting does not occur in let.	Hoisting occurs in var.
+
+        function func() {
+            var a = 100;
+            let b = 50;
+
+            document.write(a + '<br>' + b + '<br>');
+            a = 200;
+            b = 70;
+            document.write(a + '<br>');
+            document.write(b + '<br>');
+            // Redeclaration of variable 'a'
+            var a = 'text';
+            document.write(a + '<br>');
+            // let variable can not be redeclared 
+            //let b='text b'; // it will show SyntaxError
+            //document.write(a+'<br>');  
+
+            // function func1(){
+
+            //     document.write('function inside function');
+            // } 
+            // func1();
+        }
+
+        function func2() {
+            let c='Hello Gagan';
+            if(c=='Hello Gagan'){
+                let d='If statement executed';
+                console.log(c+'\n'+d);
+            }
+            // console.log(c+'\n'+d);
+            // document.write('function inside function');
+        }
+        // func2();
+        // func();
+
+        console.log(p); //This is variable hoisting{a variable can be declared after it has been used.}
+        var p;
+
+        // console.log(q); // let keyword do not allow variable hoisting. it will show ReferenceErrror
+        // let q;
+
+    </script>
+</body>
+
+</html>

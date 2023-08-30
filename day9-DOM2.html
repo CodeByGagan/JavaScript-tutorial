@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+</head>
+<body>
+    <form name="f1">
+        <input type="text" placeholder="Type something here">
+        <input type="button" value="button" onclick="display()">   
+        <div id="div1"></div>
+
+        <input name="password" type="password" placeholder="enter password here" onkeyup="password1()">   <!-- event binding -->
+        <div id="div2"></div>
+    </form>
+
+    
+
+    <script>
+        // JS innerHTML properties
+        // The innerHTML property can be used to write the dynamic html on the html document.
+        const display = () => {
+            var data = '<input type="text" name="t1"><input type="button" value="click me">';
+            document.getElementById('div1').innerHTML=data;
+        }
+
+        //The innerText property
+        //The innerText property can be used to write the dynamic text on the html document. Here, text will not be interpreted as html text but a normal text.
+        const password1 = () => {
+            var msg;
+            var passwordLength=document.f1.password.value.length;
+            
+            if(passwordLength>5){
+                msg='Strong Password';
+            }else{
+                msg='Weak Password';
+            }
+            document.getElementById('div2').innerText=msg;
+        }
+    </script>
+</body>
+</html>

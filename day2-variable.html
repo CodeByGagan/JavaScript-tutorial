@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS variables</title>
+
+</head>
+
+<body>
+    <script>
+        // globalvar(); // function can be called before defining but variable can not
+        // VARIABLES(2)
+        // 1. Local 2. Global
+        //variable name must start with number, _, $.
+        // a & b are global variable and is accessible anywhare in program
+
+        var a = 50;
+        var b = 5;
+        document.write('sum of ' + a + ' and ' + b + ' is: ' + (a + b)+"<br>");
+
+        function add() {
+           var  m = 50;
+           var n = 6;
+            document.write('sum of ' + m + ' and ' + n + ' is ' + (m + n)+"<br>");
+           
+        }
+        // add();
+        
+        //document.write('value of m is '+m+' value of n is'+n);// It will throw RefrenceError
+        //m & n are local variable and they are accessible 
+        //only within scope of function/block in which they had defined 
+
+        function alrt(){
+            alert('a is a global variable and value of a is: '+a);
+        }
+        // alrt();
+
+        function globalvar(){
+            document.write('value of a is '+window.a)
+        }
+        // globalvar();
+        
+    </script>
+    <!-- <button onclick="alert('a is a global variable and value of a is '+a)">alert</button> -->
+</body>
+
+</html>

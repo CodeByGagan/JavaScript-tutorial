@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+</head>
+<body>
+    <form action="" name="f1">
+        <input type="text" placeholder="enter width" id="wid">
+        <input type="text" placeholder="enter height" id="hei">
+        <input type="button" value="calculate area" onclick="calcarea()">
+    </form>
+
+    <script>
+        function calcarea(){
+            var width = document.getElementById('wid').value;
+            var height = document.getElementById('hei').value;
+            var result = width * height;
+            alert('Area is '+result);
+        }
+    </script>
+</body>
+</html>

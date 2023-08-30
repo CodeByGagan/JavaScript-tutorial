@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class & Object</title>
+</head>
+
+<body>
+    <script>
+        // creating Employeee class
+        class Employee {
+            // Passing the parameters to the constructor
+            // constructor is a special function that initialise instance of class i.e. obj.
+            constructor(empId, name, dept, salary) {
+                this.empId = empId; // This keyword refer to current obj
+                this.name = name;
+                this.dept = dept;
+                this.salary = salary;
+            }
+        }
+
+        // Creating Obj and passing arguments
+        var emp1 = new Employee('F1', 'Apple', 'Fruit', 200);
+        var emp2 = new Employee('F2', 'Banana', 'Fruit', 60);
+        var emp3 = new Employee('C1', 'Red', 'Color', 20);
+
+        // to access the class member outside of the class the syntac is 'obj.varName'
+        // .(dot) is operator here
+        document.write('Employee ID: ' + emp1.empId + ' Employee Name: ' + emp1.name + ' Employee Deprtment: ' + emp1.dept + ' Employee Salary: ' + emp1.salary + '<br>');
+        document.write('Employee ID: ' + emp2.empId + ' Employee Name: ' + emp2.name + ' Employee Deprtment: ' + emp2.dept + ' Employee Salary: ' + emp2.salary + '<br>');
+        document.write('Employee ID: ' + emp3.empId + ' Employee Name: ' + emp3.name + ' Employee Deprtment: ' + emp3.dept + ' Employee Salary: ' + emp3.salary + '<br>');
+
+        class Student{
+            // constructor method called autimatically
+            constructor(name, rollNo, grade){
+                this.name = name;
+                this.rollNo = rollNo;
+                this.grade = grade;
+            }
+
+            // defining method to show student details
+            showDetails(){
+                document.write('Student Name: ' + this.name + ' Student Roll No: ' + this.rollNo +' Student Grade: ' + this.grade +'<br> ' )
+            }
+        }
+
+        var Student1 = new Student('Moon Knight', 1, 'A1');
+        var Student2 = new Student('Thor', 2, 'O1');
+
+        // calling showDetais() on Student obj
+        Student1.showDetails();
+        Student2.showDetails();
+
+        // exercise start
+            //create a class Person
+            class Person{
+                constructor(name){
+                    this.name = name;
+                }
+
+                //define a method greet() as a class member
+                greet(){
+                    console.log(`Hello ${this.name}`); //within greet() use console.log to display HELLO john or hello gagan
+                }
+            }
+
+            var person1 = new Person(`Madhuparna ma'am`);
+            person1.greet();
+            // console.log(typeof person1);
+        // exercise end
+
+        
+        class noConstructor{
+            show(name){
+                console.log(`Hello ${name}`);
+            }
+        }
+
+        var noConstructor1 = new noConstructor();
+        noConstructor1.show('gagan');
+        // console.log(typeof noConstructor1);
+
+        
+    </script>
+</body>
+
+</html>

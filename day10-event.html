@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <h1 id="heading" ondblclick="function1()">Double click me</h1>
+    <p id="para"></p>
+
+    <script>
+        // JavaScript Events 
+        //The change in the state of an object is known as an Event. In html, there are various events which represents that some activity is performed by the user or by the browser. When javascript code is included in HTML, js react over these events and allow the execution. This process of reacting over the events is called Event Handling. Thus, js handles the HTML events via Event Handlers.
+        function alrt(){
+            alert('this is an alert box'); // onmouseover="alrt()"
+        }
+
+        function function1(){
+            document.getElementById('para').innerText='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui non temporibus eaque quam. Sed quo eaque nihil asperiores excepturi voluptates. Voluptas expedita nobis non veniam aliquid, vero nostrum dolorum quis?';
+
+        }
+    </script>
+</body>
+</html>
